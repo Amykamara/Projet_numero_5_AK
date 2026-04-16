@@ -228,6 +228,9 @@ header {
   position: absolute;
 }
 /* Gestion des points du carrousel */
+ul {
+  display: flex;
+}
 .dots {
   position: absolute;
   bottom: 40px;

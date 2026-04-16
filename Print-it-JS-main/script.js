@@ -1,44 +1,44 @@
-// J’ai plusieurs slides
 
-// J’ai un bouton left right
-
-// Au clic → je passe à la suivante slide
-
-// Arrivé à la dernière → je reviens à la première
-
-
-// Variable Btn
-
+// Variables 
 const btnLeft = document.querySelector(".arrow_left");
 const btnright =document.querySelector(".arrow_right");
-let slide = ["./assets/images/slideshow/slide1.jpg","./assets/images/slideshow/slide2.jpg", "./assets/images/slideshow/slide3.jpg","./assets/images/slideshow/slide4.jpg"];
+let slide = ["./assets/images/slideshow/slide1.jpg","./assets/images/slideshow/slide2.jpg", "./assets/images/slideshow/slide3.jpg","./assets/images/slideshow/slide4.png"];
 const banner = document.querySelector(".banner-img");
 let index = 0;
+let dots = document.querySelectorAll(".dot");
+console.log(dots);
 
 // Je déclare/
-banner.src= slide[0];
+banner.src= slide[index];
+dots[index].classList.add("dot_selected");
 
 
 // au clique Gauche
- 
-btnLeft.addEventListener("click" , function(params) {
+
+btnLeft.addEventListener("click" , function() {
+    dots[index].classList.remove("dot_selected");
     
 index --;
     if (index < 0 ) {
-    index = 3  ;
+    index = slide.length -1  ;
     
 }
 banner.src= slide[index];
+dots[index].classList.add("dot_selected");
 });
+
 
 // click droit 
 
-btnright.addEventListener("click" , function(params) {
-    
+btnright.addEventListener("click" , function() {
+    dots[index].classList.remove("dot_selected");
 index++;
-    if (index > 3) {
+    if (index > slide.length -1) {
     index = 0;
     
 }
 banner.src= slide[index];
+dots[index].classList.add("dot_selected");
 });
+
+
