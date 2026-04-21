@@ -20,7 +20,6 @@ const slides = [
 		tagLine: "Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ];
-// let slide = ["./assets/images/slideshow/slide1.jpg","./assets/images/slideshow/slide2.jpg", "./assets/images/slideshow/slide3.jpg","./assets/images/slideshow/slide4.png"];
 const banner = document.querySelector(".banner-img");
 const tagLine = document.querySelector(".tagline");
 let index = 0;
